@@ -1,0 +1,12 @@
+<button type="primary" bindtap="getData">点击获取数据</button>
+<view wx:for="{{dataObj}}" > {{item.home}} - {{item.sex}} </view>
+------------------------------------------------------------------------------------
+<button type="primary" bindtap="addData">点击插入</button>
+------------------------------------------------------------------------------------
+<form bindsubmit="btnSub">
+    <input name="name" placeholder="请输入标题"></input>
+    <input name="age" placeholder="请输入作者"></input>
+    <textarea name="home" placeholder="请输入内容"></textarea>
+    <button type="primary" form-type="submit" >提交</button>
+    <button form-type="reset">重置</button>
+</form>

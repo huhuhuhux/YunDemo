@@ -1,0 +1,4 @@
+<view wx:for="{{dataList}}" wx:key="index-1" class="row">
+    <view class="title">{{index+1}}、{{item.titile}}</view>
+    <view>阅读量：{{item.read}}</view>
+</view>
