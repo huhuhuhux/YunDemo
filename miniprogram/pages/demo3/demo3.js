@@ -7,6 +7,21 @@ Page({
     data: {
         dataList:[]
     },
+    
+    clickrow(res){
+        var {id,index}=res.currentTarget.dataset;
+        console.log(id)
+        wx.cloud.callFunction({
+            name:"unList",
+            data:{
+                id:id
+            }
+        })
+        .then(res=>{    
+           console.log(res)
+        })
+    },
+
     getData(page=0,num=5){
         wx.cloud.callFunction({
             name:"getData",
@@ -27,8 +42,6 @@ Page({
     onLoad(options) {
         this.getData(0,4);
     },
-
-    
 
     /**
      * 页面上拉触底事件的处理函数
